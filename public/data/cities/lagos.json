@@ -11,8 +11,8 @@
       "image": "/images/lagos/allen-avenue.jpg",
       "landmarks": ["Computer Village", "First Bank Allen"],
       "directions": {
-        "en": "From Ikeja Bus Stop, move towards Computer Village. Continue straight until you reach First Bank. Allen Avenue runs beside it.",
-        "yo": "Láti Ikeja Bus Stop, lọ sí Computer Village. Tẹ̀síwájú títí dé First Bank. Allen Avenue wà lẹ́gbẹ̀ẹ́ rẹ̀."
+        "en": "Allen Avenue is a bustling commercial street in Ikeja, starting from Ikeja Bus Stop and running past Computer Village, a hub for electronics and tech shops. Continuing straight, you'll see First Bank Allen branch on the right. The avenue is lined with shops, restaurants, and small offices. It connects to Opebi Road and Toyin Street, making it a major artery for commuters heading to Victoria Island or Surulere. Traffic is moderate to heavy during peak hours, and pedestrian sidewalks are available for safe walking.",
+        "yo": "Allen Avenue jẹ́ opopona tí ń gbóná jùlọ ní Ikeja, láti Ikeja Bus Stop kọjá Computer Village, ibi tí wọ́n ti ń tà ẹ̀rọ ayélujára. Tẹ̀síwájú títí iwọ o fi rí First Bank Allen lẹ́gbẹ̀ẹ́ ọtun. Opopona yii kún fún ilé itaja, ilé onjẹ, àti ọfiisi kékeré. Ó so Opebi Road àti Toyin Street pọ̀, tó jẹ́ opopona pàtàkì fún ìrìnàjò sí Victoria Island tàbí Surulere. Àkúnya ọkọ le pọ̀ ní àkókò ìrìnàjò, ṣùgbọ́n ẹlẹsẹ̀ lè rìn ní ààbò."
       }
     },
     {
@@ -23,8 +23,8 @@
       "image": "/images/lagos/opebi-road.jpg",
       "landmarks": ["Spar Opebi", "Opebi Link Bridge"],
       "directions": {
-        "en": "From Allen Roundabout, head towards Opebi and cross the bridge near Spar.",
-        "yo": "Láti Allen Roundabout, lọ sí Opebi, kọjá afárá tó wà lẹ́gbẹ̀ẹ́ Spar."
+        "en": "Opebi Road begins at Allen Roundabout and runs northeast towards Opebi Link Bridge. Along the way, it passes Spar Opebi, banks, and residential estates. It intersects with minor streets leading to local markets and schools. Traffic is heavy during morning and evening peak hours. Pedestrian crossings are available at key junctions. The road is vital for accessing Ikeja GRA and surrounding neighborhoods.",
+        "yo": "Opebi Road bẹ̀rẹ̀ láti Allen Roundabout, ó ń lọ sí àríwá ìlà-oòrùn títí dé Opebi Link Bridge. Lọ́nà yìí, iwọ yóò kọjá Spar Opebi, àwọn ilé banki àti àwọn ilé ìdílé. Ó dá àwọn opopona kékeré pọ̀ tó ń lọ sí ọjà àti ileewe. Àkúnya ọkọ pọ̀ ní owurọ àti alẹ́. Àwọn àgọ́ ìbá ọkọ wà ní àwọn àgọ́ pàtàkì. Opopona yii ṣe pàtàkì fún wọlé sí Ikeja GRA àti awọn agbegbe lẹ́gbẹ̀ẹ́."
       }
     },
     {
@@ -35,8 +35,8 @@
       "image": "/images/lagos/toyin-street.jpg",
       "landmarks": ["Toyin Bus Stop", "Sweet Sensation"],
       "directions": {
-        "en": "From Allen Avenue, turn at Toyin Bus Stop. The road beside Sweet Sensation is Toyin Street.",
-        "yo": "Láti Allen Avenue, yí sí Toyin Bus Stop. Opopona tó wà lẹ́gbẹ̀ẹ́ Sweet Sensation ni Toyin Street."
+        "en": "Toyin Street branches off Allen Avenue at Toyin Bus Stop and runs past Sweet Sensation restaurant. It passes residential buildings and a few offices. The street is lightly trafficked and connects to nearby Opebi residential blocks. Ideal for pedestrians or motorbikes looking for a quieter route to central Ikeja.",
+        "yo": "Toyin Street yà láti Allen Avenue ní Toyin Bus Stop, ó kọjá ilé onjẹ Sweet Sensation. Ó kọjá àwọn ilé ìdílé àti ọfiisi kékeré. Opopona jẹ́ fun ọkọ alákọ̀ọ́rẹ́, ó sì so àwọn ile ibugbe Opebi pọ̀. Ó dára fún ẹlẹsẹ̀ tàbí ọkọ kékeré tó ń wá opopona ìmọ̀lára sí aringbungbun Ikeja."
       }
     },
     {
@@ -45,10 +45,10 @@
       "type": "major",
       "area": "Surulere",
       "image": "/images/lagos/adeniran-ogunsanya.jpg",
-      "landmarks": ["Shoprite Surulere", "Stadium"],
+      "landmarks": ["Shoprite Surulere", "National Stadium"],
       "directions": {
-        "en": "From Shoprite Surulere, walk towards the stadium. The main road opposite the mall is Adeniran Ogunsanya.",
-        "yo": "Láti Shoprite Surulere, rìn síbi Stadium. Opopona ńlá tó dojú kọ ilé itaja náà ni Adeniran Ogunsanya."
+        "en": "Adeniran Ogunsanya Street starts from the Shoprite Surulere complex and heads towards National Stadium. Along the road, you will find banks, markets, and residential buildings. It intersects with Bode Thomas and Ogunlana Drive. Traffic can be dense, especially during football matches or market days. Pedestrian walkways are available, and the street is a major thoroughfare in Surulere.",
+        "yo": "Adeniran Ogunsanya Street bẹ̀rẹ̀ láti Shoprite Surulere, ó ń lọ sí National Stadium. Lọ́nà yìí, iwọ yóò rí ilé banki, ọjà, àti ilé ìdílé. Ó dá Bode Thomas àti Ogunlana Drive pọ̀. Àkúnya ọkọ pọ̀, pàápàá ní ọjọ́ ere bọọlu tàbí ọjọ́ ọjà. Àwọn ẹlẹsẹ̀ lè rìn ní ààbò. Opopona yii jẹ́ pàtàkì ní Surulere."
       }
     },
     {
@@ -57,10 +57,10 @@
       "type": "major",
       "area": "Surulere",
       "image": "/images/lagos/bode-thomas.jpg",
-      "landmarks": ["Bode Thomas Bus Stop", "UBA"],
+      "landmarks": ["Ojuelegba", "UBA Surulere"],
       "directions": {
-        "en": "From Ojuelegba, move inward toward Bode Thomas Bus Stop. The long straight road is Bode Thomas Street.",
-        "yo": "Láti Ojuelegba, wọlé sí Bode Thomas Bus Stop. Opopona gígùn tó lọ títí ni Bode Thomas Street."
+        "en": "Bode Thomas Street runs from Ojuelegba towards Surulere and connects with Adeniran Ogunsanya. The street is lined with banks, offices, and small eateries. Traffic is heavy during peak periods, and buses regularly ply this route. Pedestrian sidewalks exist along most parts, making walking safe. The road is vital for local commuting in Lagos Mainland.",
+        "yo": "Bode Thomas Street bẹ̀rẹ̀ láti Ojuelegba sí Surulere, ó sì so Adeniran Ogunsanya pọ̀. Opopona kún fún ilé banki, ọfiisi, àti ilé onjẹ kékeré. Àkúnya ọkọ pọ̀ ní àkókò ìrìnàjò, ọkọ akero sì ń lo opopona yii ní ìgbà gbogbo. Àwọn ẹlẹsẹ̀ lè rìn ní ààbò. Opopona yii ṣe pàtàkì fún ìrìnàjò ní Lagos Mainland."
       }
     },
     {
@@ -69,10 +69,10 @@
       "type": "major",
       "area": "Surulere",
       "image": "/images/lagos/ogunlana-drive.jpg",
-      "landmarks": ["National Stadium", "Teslim Balogun"],
+      "landmarks": ["National Stadium", "Teslim Balogun Stadium"],
       "directions": {
-        "en": "From National Stadium, take the road running beside Teslim Balogun Stadium — that is Ogunlana Drive.",
-        "yo": "Láti National Stadium, gba opopona tó ń lọ lẹ́gbẹ̀ẹ́ Teslim Balogun Stadium, Ogunlana Drive ni."
+        "en": "Ogunlana Drive begins near National Stadium and runs along Teslim Balogun Stadium. It connects Bode Thomas to other Surulere roads. The street passes through commercial and residential zones, with restaurants and shops on either side. Traffic is moderate, and it is commonly used for accessing sports facilities and markets in Surulere.",
+        "yo": "Ogunlana Drive bẹ̀rẹ̀ lẹ́gbẹ̀ẹ́ National Stadium, ó sì ń lọ lẹ́gbẹ̀ẹ́ Teslim Balogun Stadium. Ó so Bode Thomas pọ̀ mọ́ àwọn opopona Surulere míì. Opopona kọjá agbègbè oníṣòwò àti ìdílé, pẹ̀lú ilé onjẹ àti ilé itaja lẹ́gbẹ̀ẹ́. Àkúnya ọkọ jẹ́ alákọ̀ọ́rẹ́, ó sì jẹ́ opopona wọlé sí àwọn ibùdó ere àti ọjà."
       }
     },
     {
@@ -83,8 +83,8 @@
       "image": "/images/lagos/adeola-odeku.jpg",
       "landmarks": ["Mega Plaza", "Hard Rock Cafe"],
       "directions": {
-        "en": "From Mega Plaza, move straight towards the beach side. The main road with restaurants is Adeola Odeku.",
-        "yo": "Láti Mega Plaza, lọ sójú omi. Opopona tí ilé onjẹ púpọ̀ wà ni Adeola Odeku."
+        "en": "Adeola Odeku Street is a central commercial street in Victoria Island. Starting from Mega Plaza, it runs past high-end restaurants, offices, and retail stores. It intersects with Akin Adesola and Ozumba Mbadiwe, providing access to the waterfront and entertainment districts. Traffic can be heavy in the evenings, and sidewalks are well-maintained for pedestrians.",
+        "yo": "Adeola Odeku jẹ́ opopona aringbungbun Victoria Island. Láti Mega Plaza, ó kọjá àwọn ilé onjẹ gíga, ọfiisi, àti ilé itaja. Ó dá Akin Adesola àti Ozumba Mbadiwe pọ̀, ó ń gba wọlé sí etíkun omi àti agbègbè ìdárayá. Àkúnya ọkọ pọ̀ ní alẹ́, ṣùgbọ́n àwọn ẹlẹsẹ̀ lè rìn lórí ààbò tó dáa."
       }
     },
     {
@@ -95,8 +95,8 @@
       "image": "/images/lagos/ozumba-mbadiwe.jpg",
       "landmarks": ["Civic Centre", "Landmark Beach"],
       "directions": {
-        "en": "From Civic Centre, continue along the expressway by the water — that road is Ozumba Mbadiwe.",
-        "yo": "Láti Civic Centre, tẹ̀síwájú lẹ́gbẹ̀ẹ́ omi. Opopona yìí ni Ozumba Mbadiwe."
+        "en": "Ozumba Mbadiwe Avenue runs along the waterfront of Victoria Island, starting from Civic Centre and heading towards Landmark Beach. The street features offices, hotels, and restaurants. Traffic is moderate, and it is frequently used by tourists and business travelers. Pedestrian walkways and crossings are available, making it suitable for safe walking.",
+        "yo": "Ozumba Mbadiwe Avenue bẹ̀rẹ̀ láti Civic Centre sí Landmark Beach. Opopona kún fún ọfiisi, ile-itura, àti ilé onjẹ. Àkúnya ọkọ jẹ́ alákọ̀ọ́rẹ́, ó sì jẹ́ opopona tí àwọn arinrin-ajo àti àwọn oníṣòwò ń lo. Àwọn ẹlẹsẹ̀ lè rìn ní ààbò."
       }
     },
     {
@@ -107,8 +107,8 @@
       "image": "/images/lagos/akin-adesola.jpg",
       "landmarks": ["Eko Hotel", "Union Bank"],
       "directions": {
-        "en": "From Eko Hotel Roundabout, take the road beside Union Bank — that is Akin Adesola.",
-        "yo": "Láti Eko Hotel Roundabout, gba opopona tó wà lẹ́gbẹ̀ẹ́ Union Bank, Akin Adesola ni."
+        "en": "Akin Adesola runs from Eko Hotel Roundabout towards the Union Bank building. The street is lined with office buildings, retail stores, and restaurants. Traffic is moderate, with peak hours in the morning and evening. Pedestrians can use sidewalks safely, and the street connects to Adeola Odeku and Ozumba Mbadiwe for easy city access.",
+        "yo": "Akin Adesola bẹ̀rẹ̀ láti Eko Hotel Roundabout sí Union Bank. Opopona kún fún ọfiisi, ilé itaja, àti ilé onjẹ. Àkúnya ọkọ jẹ́ alákọ̀ọ́rẹ́ ní owurọ àti alẹ́. Àwọn ẹlẹsẹ̀ lè rìn lórí ààbò, opopona yii sì so Adeola Odeku àti Ozumba Mbadiwe pọ̀."
       }
     }
   ]
