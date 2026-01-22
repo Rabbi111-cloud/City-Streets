@@ -1,10 +1,7 @@
 {
   "city": "Lagos",
   "country": "Nigeria",
-  "language": {
-    "primary": "English",
-    "native": "Yoruba"
-  },
+  "language": { "primary": "English", "native": "Yoruba" },
   "streets": [
     {
       "id": "allen-avenue",
@@ -12,10 +9,7 @@
       "type": "major",
       "area": "Ikeja",
       "image": "/images/lagos/allen-avenue.jpg",
-      "landmarks": [
-        "Computer Village",
-        "First Bank Allen"
-      ],
+      "landmarks": ["Computer Village", "First Bank Allen"],
       "directions": {
         "en": "From Ikeja Bus Stop, move towards Computer Village. Continue straight until you reach First Bank. Allen Avenue runs beside it.",
         "yo": "Láti Ikeja Bus Stop, lọ sí Computer Village. Tẹ̀síwájú títí dé First Bank. Allen Avenue wà lẹ́gbẹ̀ẹ́ rẹ̀."
@@ -27,13 +21,94 @@
       "type": "major",
       "area": "Ikeja",
       "image": "/images/lagos/opebi-road.jpg",
-      "landmarks": [
-        "Spar Opebi",
-        "Opebi Link Bridge"
-      ],
+      "landmarks": ["Spar Opebi", "Opebi Link Bridge"],
       "directions": {
         "en": "From Allen Roundabout, head towards Opebi and cross the bridge near Spar.",
         "yo": "Láti Allen Roundabout, lọ sí Opebi, kọjá afárá tó wà lẹ́gbẹ̀ẹ́ Spar."
+      }
+    },
+    {
+      "id": "toyin-street",
+      "name": "Toyin Street",
+      "type": "minor",
+      "area": "Ikeja",
+      "image": "/images/lagos/toyin-street.jpg",
+      "landmarks": ["Toyin Bus Stop", "Sweet Sensation"],
+      "directions": {
+        "en": "From Allen Avenue, turn at Toyin Bus Stop. The road beside Sweet Sensation is Toyin Street.",
+        "yo": "Láti Allen Avenue, yí sí Toyin Bus Stop. Opopona tó wà lẹ́gbẹ̀ẹ́ Sweet Sensation ni Toyin Street."
+      }
+    },
+    {
+      "id": "adeniran-ogunsanya",
+      "name": "Adeniran Ogunsanya",
+      "type": "major",
+      "area": "Surulere",
+      "image": "/images/lagos/adeniran-ogunsanya.jpg",
+      "landmarks": ["Shoprite Surulere", "Stadium"],
+      "directions": {
+        "en": "From Shoprite Surulere, walk towards the stadium. The main road opposite the mall is Adeniran Ogunsanya.",
+        "yo": "Láti Shoprite Surulere, rìn síbi Stadium. Opopona ńlá tó dojú kọ ilé itaja náà ni Adeniran Ogunsanya."
+      }
+    },
+    {
+      "id": "bode-thomas",
+      "name": "Bode Thomas",
+      "type": "major",
+      "area": "Surulere",
+      "image": "/images/lagos/bode-thomas.jpg",
+      "landmarks": ["Bode Thomas Bus Stop", "UBA"],
+      "directions": {
+        "en": "From Ojuelegba, move inward toward Bode Thomas Bus Stop. The long straight road is Bode Thomas Street.",
+        "yo": "Láti Ojuelegba, wọlé sí Bode Thomas Bus Stop. Opopona gígùn tó lọ títí ni Bode Thomas Street."
+      }
+    },
+    {
+      "id": "ogunlana-drive",
+      "name": "Ogunlana Drive",
+      "type": "major",
+      "area": "Surulere",
+      "image": "/images/lagos/ogunlana-drive.jpg",
+      "landmarks": ["National Stadium", "Teslim Balogun"],
+      "directions": {
+        "en": "From National Stadium, take the road running beside Teslim Balogun Stadium — that is Ogunlana Drive.",
+        "yo": "Láti National Stadium, gba opopona tó ń lọ lẹ́gbẹ̀ẹ́ Teslim Balogun Stadium, Ogunlana Drive ni."
+      }
+    },
+    {
+      "id": "adeola-odeku",
+      "name": "Adeola Odeku",
+      "type": "major",
+      "area": "Victoria Island",
+      "image": "/images/lagos/adeola-odeku.jpg",
+      "landmarks": ["Mega Plaza", "Hard Rock Cafe"],
+      "directions": {
+        "en": "From Mega Plaza, move straight towards the beach side. The main road with restaurants is Adeola Odeku.",
+        "yo": "Láti Mega Plaza, lọ sójú omi. Opopona tí ilé onjẹ púpọ̀ wà ni Adeola Odeku."
+      }
+    },
+    {
+      "id": "ozumba-mbadiwe",
+      "name": "Ozumba Mbadiwe",
+      "type": "major",
+      "area": "Victoria Island",
+      "image": "/images/lagos/ozumba-mbadiwe.jpg",
+      "landmarks": ["Civic Centre", "Landmark Beach"],
+      "directions": {
+        "en": "From Civic Centre, continue along the expressway by the water — that road is Ozumba Mbadiwe.",
+        "yo": "Láti Civic Centre, tẹ̀síwájú lẹ́gbẹ̀ẹ́ omi. Opopona yìí ni Ozumba Mbadiwe."
+      }
+    },
+    {
+      "id": "akin-adesola",
+      "name": "Akin Adesola",
+      "type": "major",
+      "area": "Victoria Island",
+      "image": "/images/lagos/akin-adesola.jpg",
+      "landmarks": ["Eko Hotel", "Union Bank"],
+      "directions": {
+        "en": "From Eko Hotel Roundabout, take the road beside Union Bank — that is Akin Adesola.",
+        "yo": "Láti Eko Hotel Roundabout, gba opopona tó wà lẹ́gbẹ̀ẹ́ Union Bank, Akin Adesola ni."
       }
     }
   ]
