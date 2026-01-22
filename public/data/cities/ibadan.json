@@ -1,0 +1,25 @@
+{
+  "city": "Ibadan",
+  "country": "Nigeria",
+  "language": {
+    "primary": "English",
+    "native": "Yoruba"
+  },
+  "streets": [
+    {
+      "id": "ring-road",
+      "name": "Ring Road",
+      "type": "major",
+      "area": "Ibadan North",
+      "image": "/images/ibadan/ring-road.jpg",
+      "landmarks": [
+        "Challenge Roundabout",
+        "Dugbe"
+      ],
+      "directions": {
+        "en": "From Challenge Roundabout, follow the circular road to Dugbe.",
+        "yo": "Láti Challenge Roundabout, tẹ̀lé opopona yíyíká títí dé Dugbe."
+      }
+    }
+  ]
+}
