@@ -1,10 +1,7 @@
 {
   "city": "Abuja",
   "country": "Nigeria",
-  "language": {
-    "primary": "English",
-    "native": "Hausa"
-  },
+  "language": { "primary": "English", "native": "Hausa" },
   "streets": [
     {
       "id": "ahmadu-bello-way",
@@ -12,13 +9,106 @@
       "type": "major",
       "area": "Central Area",
       "image": "/images/abuja/ahmadu-bello-way.jpg",
-      "landmarks": [
-        "Eagle Square",
-        "NNPC Towers"
-      ],
+      "landmarks": ["Eagle Square", "NNPC Towers"],
       "directions": {
         "en": "From Eagle Square, move straight past NNPC Towers.",
         "ha": "Daga Eagle Square, ka wuce NNPC Towers kai tsaye."
+      }
+    },
+    {
+      "id": "aminu-kano-crescent",
+      "name": "Aminu Kano Crescent",
+      "type": "major",
+      "area": "Central Area",
+      "image": "/images/abuja/aminu-kano-crescent.jpg",
+      "landmarks": ["Sheraton Hotel", "Silverbird"],
+      "directions": {
+        "en": "From Sheraton Hotel, turn towards Silverbird. The curved road is Aminu Kano Crescent.",
+        "ha": "Daga Sheraton Hotel, juya zuwa Silverbird. Hanyar da ke lankwashewa ita ce Aminu Kano Crescent."
+      }
+    },
+    {
+      "id": "gana-street",
+      "name": "Gana Street",
+      "type": "minor",
+      "area": "Central Area",
+      "image": "/images/abuja/gana-street.jpg",
+      "landmarks": ["Transcorp Hilton", "NITEL"],
+      "directions": {
+        "en": "From Transcorp Hilton, take the road beside the old NITEL building — Gana Street.",
+        "ha": "Daga Transcorp Hilton, ka bi hanyar gefen tsohon ginin NITEL, Gana Street ce."
+      }
+    },
+    {
+      "id": "herbert-macaulay-way",
+      "name": "Herbert Macaulay Way",
+      "type": "major",
+      "area": "Central Area",
+      "image": "/images/abuja/herbert-macaulay-way.jpg",
+      "landmarks": ["Millennium Park", "Maitama Bridge"],
+      "directions": {
+        "en": "From Millennium Park, move towards Maitama Bridge. The road connecting them is Herbert Macaulay Way.",
+        "ha": "Daga Millennium Park, ka nufi Maitama Bridge. Hanyar haɗin su ita ce Herbert Macaulay Way."
+      }
+    },
+    {
+      "id": "tafawa-balewa-way",
+      "name": "Tafawa Balewa Way",
+      "type": "major",
+      "area": "Central Area",
+      "image": "/images/abuja/tafawa-balewa-way.jpg",
+      "landmarks": ["National Mosque", "Federal Secretariat"],
+      "directions": {
+        "en": "From National Mosque, continue past the Secretariat — that is Tafawa Balewa Way.",
+        "ha": "Daga Babban Masallacin Kasa, ka wuce Secretariat, wannan Tafawa Balewa Way ce."
+      }
+    },
+    {
+      "id": "adetokunbo-ademola-crescent",
+      "name": "Adetokunbo Ademola Crescent",
+      "type": "minor",
+      "area": "Central Area",
+      "image": "/images/abuja/adetokunbo-ademola-crescent.jpg",
+      "landmarks": ["Embassies", "Transcorp Hilton"],
+      "directions": {
+        "en": "From Transcorp Hilton, enter the embassy district — Adetokunbo Ademola Crescent.",
+        "ha": "Daga Transcorp Hilton, shiga yankin ofisoshin jakadanci, Adetokunbo Ademola Crescent."
+      }
+    },
+    {
+      "id": "olu-obasanjo-way",
+      "name": "Olu Obasanjo Way",
+      "type": "major",
+      "area": "Area 1",
+      "image": "/images/abuja/olu-obasanjo-way.jpg",
+      "landmarks": ["Area 1 Roundabout", "Abuja City Gate"],
+      "directions": {
+        "en": "From City Gate, drive towards Area 1. The long express road is Olu Obasanjo Way.",
+        "ha": "Daga City Gate, ka nufi Area 1. Doguwar babbar hanya ita ce Olu Obasanjo Way."
+      }
+    },
+    {
+      "id": "nnamdi-azikiwe-expressway",
+      "name": "Nnamdi Azikiwe Expressway",
+      "type": "major",
+      "area": "Airport Road",
+      "image": "/images/abuja/nnamdi-azikiwe-expressway.jpg",
+      "landmarks": ["Airport Road Junction"],
+      "directions": {
+        "en": "From Airport Road, continue straight into the city — Nnamdi Azikiwe Expressway.",
+        "ha": "Daga Airport Road, ka ci gaba kai tsaye zuwa gari, Nnamdi Azikiwe Expressway."
+      }
+    },
+    {
+      "id": "independence-avenue",
+      "name": "Independence Avenue",
+      "type": "major",
+      "area": "Central Area",
+      "image": "/images/abuja/independence-avenue.jpg",
+      "landmarks": ["Central Bank", "National Assembly"],
+      "directions": {
+        "en": "From Central Bank, drive towards National Assembly — Independence Avenue.",
+        "ha": "Daga Babban Bankin Kasa, ka nufi National Assembly, Independence Avenue."
       }
     }
   ]
