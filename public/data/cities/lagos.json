@@ -1,0 +1,40 @@
+{
+  "city": "Lagos",
+  "country": "Nigeria",
+  "language": {
+    "primary": "English",
+    "native": "Yoruba"
+  },
+  "streets": [
+    {
+      "id": "allen-avenue",
+      "name": "Allen Avenue",
+      "type": "major",
+      "area": "Ikeja",
+      "image": "/images/lagos/allen-avenue.jpg",
+      "landmarks": [
+        "Computer Village",
+        "First Bank Allen"
+      ],
+      "directions": {
+        "en": "From Ikeja Bus Stop, move towards Computer Village. Continue straight until you reach First Bank. Allen Avenue runs beside it.",
+        "yo": "Láti Ikeja Bus Stop, lọ sí Computer Village. Tẹ̀síwájú títí dé First Bank. Allen Avenue wà lẹ́gbẹ̀ẹ́ rẹ̀."
+      }
+    },
+    {
+      "id": "opebi-road",
+      "name": "Opebi Road",
+      "type": "major",
+      "area": "Ikeja",
+      "image": "/images/lagos/opebi-road.jpg",
+      "landmarks": [
+        "Spar Opebi",
+        "Opebi Link Bridge"
+      ],
+      "directions": {
+        "en": "From Allen Roundabout, head towards Opebi and cross the bridge near Spar.",
+        "yo": "Láti Allen Roundabout, lọ sí Opebi, kọjá afárá tó wà lẹ́gbẹ̀ẹ́ Spar."
+      }
+    }
+  ]
+}
