@@ -1,0 +1,25 @@
+import { useState } from 'react'
+import { supabase } from '../lib/supabase'
+import { useRouter } from 'next/router'
+
+export default function Signup() {
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const router = useRouter()
+
+  const handleSignup = async (e) => {
+    e.preventDefault()
+    const { error } = await supabase.auth.signUp({ email, password })
+    if (error) alert(error.message)
+    else router.push('/login')
+  }
+
+  return (
+    <form onSubmit={handleSignup}>
+      <h2>Sign Up</h2>
+      <input placeholder="Email" onChange={e => setEmail(e.target.value)} />
+      <input type="password" placeholder="Password" onChange={e => setPassword(e.target.value)} />
+      <button>Create Account</button>
+    </form>
+  )
+}
