@@ -9,10 +9,10 @@
       "type": "major",
       "area": "Central Area",
       "image": "/images/abuja/ahmadu-bello-way.jpg",
-      "landmarks": ["Eagle Square", "NNPC Towers"],
+      "landmarks": ["Eagle Square", "NNPC Towers", "Unity Fountain"],
       "directions": {
-        "en": "From Eagle Square, move straight past NNPC Towers.",
-        "ha": "Daga Eagle Square, ka wuce NNPC Towers kai tsaye."
+        "en": "Ahmadu Bello Way runs through the heart of Abuja’s Central Area, starting from Eagle Square and passing government offices, NNPC Towers, and Unity Fountain. It connects to Herbert Macaulay Way and Tafawa Balewa Way. Traffic is heavy during office hours, but pedestrian bridges and crossings ensure safe walking. The street features commercial, diplomatic, and cultural landmarks, making it central to city navigation.",
+        "ha": "Ahmadu Bello Way yana tsakiyar Central Area Abuja, daga Eagle Square yana wuce ofisoshin gwamnati, NNPC Towers da Unity Fountain. Yana haɗawa da Herbert Macaulay Way da Tafawa Balewa Way. Hanya tana da cunkoso musamman lokacin aiki amma gadar mutane da wuraren ketare suna tabbatar da aminci. Hanyar cike take da wuraren kasuwanci, jakadanci, da al'adu, yana da muhimmanci ga zirga-zirgar birni."
       }
     },
     {
@@ -21,22 +21,10 @@
       "type": "major",
       "area": "Central Area",
       "image": "/images/abuja/aminu-kano-crescent.jpg",
-      "landmarks": ["Sheraton Hotel", "Silverbird"],
+      "landmarks": ["Sheraton Hotel", "Silverbird Cinemas", "National Mosque"],
       "directions": {
-        "en": "From Sheraton Hotel, turn towards Silverbird. The curved road is Aminu Kano Crescent.",
-        "ha": "Daga Sheraton Hotel, juya zuwa Silverbird. Hanyar da ke lankwashewa ita ce Aminu Kano Crescent."
-      }
-    },
-    {
-      "id": "gana-street",
-      "name": "Gana Street",
-      "type": "minor",
-      "area": "Central Area",
-      "image": "/images/abuja/gana-street.jpg",
-      "landmarks": ["Transcorp Hilton", "NITEL"],
-      "directions": {
-        "en": "From Transcorp Hilton, take the road beside the old NITEL building — Gana Street.",
-        "ha": "Daga Transcorp Hilton, ka bi hanyar gefen tsohon ginin NITEL, Gana Street ce."
+        "en": "Aminu Kano Crescent is a crescent-shaped street connecting Sheraton Hotel area to Silverbird Cinemas. It passes diplomatic houses, embassies, and cafes. Traffic is moderate, and sidewalks are available for pedestrians. The street is known for evening strolls and easy access to nearby restaurants and office buildings.",
+        "ha": "Aminu Kano Crescent hanya ce mai lankwasawa daga yankin Sheraton Hotel zuwa Silverbird Cinemas. Hanya tana wuce gidajen jakadanci, ofisoshin jakadanci, da kafet. Cunkoson hanya matsakaici ne, akwai hanyoyi ga masu tafiya. Hanya ta shahara wajen yawo da dare da sauƙin isa wuraren cin abinci da ofisoshi."
       }
     },
     {
@@ -45,10 +33,10 @@
       "type": "major",
       "area": "Central Area",
       "image": "/images/abuja/herbert-macaulay-way.jpg",
-      "landmarks": ["Millennium Park", "Maitama Bridge"],
+      "landmarks": ["Unity Fountain", "Central Bank", "FCT Secretariat"],
       "directions": {
-        "en": "From Millennium Park, move towards Maitama Bridge. The road connecting them is Herbert Macaulay Way.",
-        "ha": "Daga Millennium Park, ka nufi Maitama Bridge. Hanyar haɗin su ita ce Herbert Macaulay Way."
+        "en": "Herbert Macaulay Way connects Ahmadu Bello Way to Tafawa Balewa Way, passing Unity Fountain, Central Bank, and FCT Secretariat. It is heavily used by commuters and features traffic lights at major intersections. Sidewalks and pedestrian crossings make it safe for walking. The road is essential for reaching government offices and central business areas.",
+        "ha": "Herbert Macaulay Way yana haɗawa da Ahmadu Bello Way zuwa Tafawa Balewa Way, yana wuce Unity Fountain, Central Bank, da FCT Secretariat. Hanya tana cike da masu zirga-zirga, akwai fitilun titi a manyan haɗe-haɗe. Hanyoyi da wuraren ketare suna tabbatar da aminci ga masu tafiya. Hanya tana da muhimmanci wajen isa ofisoshin gwamnati da wuraren kasuwanci."
       }
     },
     {
@@ -57,46 +45,58 @@
       "type": "major",
       "area": "Central Area",
       "image": "/images/abuja/tafawa-balewa-way.jpg",
-      "landmarks": ["National Mosque", "Federal Secretariat"],
+      "landmarks": ["Eagle Square", "Nigerian National Mosque", "Unity Fountain"],
       "directions": {
-        "en": "From National Mosque, continue past the Secretariat — that is Tafawa Balewa Way.",
-        "ha": "Daga Babban Masallacin Kasa, ka wuce Secretariat, wannan Tafawa Balewa Way ce."
+        "en": "Tafawa Balewa Way starts from the National Mosque and runs through central business districts to Eagle Square. The road is lined with banks, offices, and commercial centers. Traffic is moderate during off-peak hours but can get heavy during special events. Pedestrian bridges and zebra crossings make walking safer. The street connects to several minor streets leading to local markets and residential areas.",
+        "ha": "Tafawa Balewa Way yana farawa daga National Mosque yana wuce yankunan kasuwanci zuwa Eagle Square. Hanya cike take da bankuna, ofisoshi, da cibiyoyin kasuwanci. Cunkoson hanya matsakaici ne a lokutan da ba na zirga-zirga ba amma yana iya yi yawa yayin abubuwan musamman. Gadon mutane da wuraren ketare suna tabbatar da aminci ga masu tafiya. Hanya tana haɗawa da kananan tituna zuwa kasuwanni da gidajen zama."
+      }
+    },
+    {
+      "id": "gana-street",
+      "name": "Gana Street",
+      "type": "minor",
+      "area": "Central Area",
+      "image": "/images/abuja/gana-street.jpg",
+      "landmarks": ["Embassy Quarter", "Private Residences"],
+      "directions": {
+        "en": "Gana Street is a quiet minor street within the diplomatic district. It runs between embassy buildings and residential houses. Traffic is light, mostly local residents. Pedestrian sidewalks are available, and it connects to larger streets like Aminu Kano Crescent for access to central amenities.",
+        "ha": "Gana Street hanya ce mai nutsuwa a cikin unguwar jakadanci. Yana wuce tsakanin ofisoshin jakadanci da gidajen zama. Cunkoson hanya kadan ne, yawanci mazauna. Hanyoyi suna samuwa ga masu tafiya, yana haɗawa da manyan tituna kamar Aminu Kano Crescent don isa wuraren a tsakiyar birni."
       }
     },
     {
       "id": "adetokunbo-ademola-crescent",
       "name": "Adetokunbo Ademola Crescent",
-      "type": "minor",
+      "type": "major",
       "area": "Central Area",
       "image": "/images/abuja/adetokunbo-ademola-crescent.jpg",
-      "landmarks": ["Embassies", "Transcorp Hilton"],
+      "landmarks": ["FCT High Court", "Embassy of France"],
       "directions": {
-        "en": "From Transcorp Hilton, enter the embassy district — Adetokunbo Ademola Crescent.",
-        "ha": "Daga Transcorp Hilton, shiga yankin ofisoshin jakadanci, Adetokunbo Ademola Crescent."
+        "en": "Adetokunbo Ademola Crescent curves through central diplomatic and residential areas, connecting various embassies, FCT High Court, and local businesses. The street sees moderate traffic, with pedestrian pathways and some green spaces along the route. It provides a scenic and safe passage for residents and visitors alike.",
+        "ha": "Adetokunbo Ademola Crescent yana lankwasawa ta cikin unguwannin jakadanci da gidaje, yana haɗawa da ofisoshin jakadanci daban-daban, FCT High Court, da kasuwanci. Hanya tana da matsakaicin cunkoso, tare da hanyoyin tafiya da wasu wuraren kore. Yana samar da kyakkyawan hanya mai aminci ga mazauna da baƙi."
       }
     },
     {
-      "id": "olu-obasanjo-way",
-      "name": "Olu Obasanjo Way",
+      "id": "olusegun-obasanjo-way",
+      "name": "Olusegun Obasanjo Way",
       "type": "major",
-      "area": "Area 1",
-      "image": "/images/abuja/olu-obasanjo-way.jpg",
-      "landmarks": ["Area 1 Roundabout", "Abuja City Gate"],
+      "area": "Central Area",
+      "image": "/images/abuja/olusegun-obasanjo-way.jpg",
+      "landmarks": ["Central Market", "Nigerian National Theatre"],
       "directions": {
-        "en": "From City Gate, drive towards Area 1. The long express road is Olu Obasanjo Way.",
-        "ha": "Daga City Gate, ka nufi Area 1. Doguwar babbar hanya ita ce Olu Obasanjo Way."
+        "en": "Olusegun Obasanjo Way runs through commercial and residential areas, linking central Abuja to surrounding districts. The street features banks, shops, and eateries. Traffic is moderate, with peak congestion during morning and evening hours. Pedestrian sidewalks are present along most stretches, making it safe for walking. It is widely used by local residents and visitors.",
+        "ha": "Olusegun Obasanjo Way yana wuce yankunan kasuwanci da gidaje, yana haɗa tsakiyar Abuja da unguwannin da ke kewaye. Hanya cike take da bankuna, shaguna, da wuraren cin abinci. Cunkoson hanya matsakaici ne, da yawa yayin safiya da yamma. Hanyoyi suna samuwa a yawancin sassan, yana tabbatar da aminci ga masu tafiya. Ana amfani da shi sosai ta mazauna da baƙi."
       }
     },
     {
       "id": "nnamdi-azikiwe-expressway",
       "name": "Nnamdi Azikiwe Expressway",
       "type": "major",
-      "area": "Airport Road",
+      "area": "Airport Road Area",
       "image": "/images/abuja/nnamdi-azikiwe-expressway.jpg",
-      "landmarks": ["Airport Road Junction"],
+      "landmarks": ["Nnamdi Azikiwe International Airport", "Jabi Lake Mall"],
       "directions": {
-        "en": "From Airport Road, continue straight into the city — Nnamdi Azikiwe Expressway.",
-        "ha": "Daga Airport Road, ka ci gaba kai tsaye zuwa gari, Nnamdi Azikiwe Expressway."
+        "en": "Nnamdi Azikiwe Expressway connects the airport area to central Abuja. Starting near the airport, it passes hotels, office buildings, and shopping malls like Jabi Lake Mall. Traffic is heavy during peak hours. Pedestrian crossings are limited, so walking is mostly for sidewalks. The expressway is vital for travelers coming in and out of the city.",
+        "ha": "Nnamdi Azikiwe Expressway yana haɗawa da yankin filin jirgin sama zuwa tsakiyar Abuja. Daga kusa da filin jirgin sama, yana wuce otal-otal, ofisoshi, da shagunan siyayya kamar Jabi Lake Mall. Cunkoson hanya yana da yawa a lokutan zirga-zirga. Wuraren ketare suna iyakance, don haka tafiya ta fi dacewa a kan hanyoyi. Hanyar tana da mahimmanci ga matafiya."
       }
     },
     {
@@ -105,10 +105,10 @@
       "type": "major",
       "area": "Central Area",
       "image": "/images/abuja/independence-avenue.jpg",
-      "landmarks": ["Central Bank", "National Assembly"],
+      "landmarks": ["Presidential Villa", "National Assembly"],
       "directions": {
-        "en": "From Central Bank, drive towards National Assembly — Independence Avenue.",
-        "ha": "Daga Babban Bankin Kasa, ka nufi National Assembly, Independence Avenue."
+        "en": "Independence Avenue runs through the government district, connecting the Presidential Villa to the National Assembly. The street is lined with government buildings, embassies, and security checkpoints. Traffic is strictly controlled, with pedestrian access limited to designated sidewalks. The avenue is key for official travel and ceremonial events.",
+        "ha": "Independence Avenue yana wuce unguwar gwamnati, yana haɗa Presidential Villa zuwa National Assembly. Hanya cike take da gine-ginen gwamnati, ofisoshin jakadanci, da wuraren tsaro. Cunkoson hanya yana ƙarƙashin kulawa sosai, hanyoyin tafiya na iyakance. Hanyar tana da muhimmanci ga zirga-zirgar hukuma da abubuwan biki."
       }
     }
   ]
