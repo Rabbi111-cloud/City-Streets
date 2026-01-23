@@ -9,7 +9,7 @@ export default function StreetPage() {
   const [street, setStreet] = useState(null)
   const [streets, setStreets] = useState([])
   const [lang, setLang] = useState('en')
-  const [bookmarked, setBookmarked] = useState(false)
+  const [views, setViews] = useState(0)
 
   useEffect(() => {
     if (!id || !city) return
@@ -26,11 +26,14 @@ export default function StreetPage() {
       })
   }, [id, city])
 
+  // VIEW COUNTER
   useEffect(() => {
-    if (!street) return
-    const saved = JSON.parse(localStorage.getItem('bookmarks') || '[]')
-    setBookmarked(saved.includes(street.id))
-  }, [street])
+    if (!id || !city) return
+    const key = `views-${city}-${id}`
+    const count = Number(localStorage.getItem(key) || 0) + 1
+    localStorage.setItem(key, count)
+    setViews(count)
+  }, [id, city])
 
   if (!street) return <p>Loading street...</p>
 
@@ -38,25 +41,15 @@ export default function StreetPage() {
   const prev = streets[index - 1]
   const next = streets[index + 1]
 
-  function toggleBookmark() {
-    const saved = JSON.parse(localStorage.getItem('bookmarks') || '[]')
-    let updated
-
-    if (saved.includes(street.id)) {
-      updated = saved.filter(i => i !== street.id)
-      setBookmarked(false)
-    } else {
-      updated = [...saved, street.id]
-      setBookmarked(true)
-    }
-
-    localStorage.setItem('bookmarks', JSON.stringify(updated))
-  }
+  const mapLink = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+    street.name + ', ' + city
+  )}`
 
   return (
     <div style={{ maxWidth: 600, margin: 'auto' }}>
       <h1>{street.name}</h1>
       <p><b>Area:</b> {street.area}</p>
+      <p>👀 Viewed {views} times</p>
 
       <img
         src={street.image}
@@ -65,14 +58,15 @@ export default function StreetPage() {
       />
 
       {/* LANGUAGE TOGGLE */}
-      <button onClick={() => setLang(lang === 'en' ? 'yo' : 'en')}>
-        Switch to {lang === 'en' ? 'Native' : 'English'}
+      <button
+        onClick={() => setLang(lang === 'en' ? 'native' : 'en')}
+        style={{ marginBottom: 12 }}
+      >
+        Switch to {lang === 'en' ? 'Native language' : 'English'}
       </button>
 
-      {/* BOOKMARK */}
-      <button onClick={toggleBookmark} style={{ marginLeft: 10 }}>
-        {bookmarked ? '★ Bookmarked' : '☆ Save street'}
-      </button>
+      <h3>Directions ({lang === 'en' ? 'English' : 'Native'})</h3>
+      <p>{street.directions[lang]}</p>
 
       <h3>Landmarks</h3>
       <ul>
@@ -81,14 +75,12 @@ export default function StreetPage() {
         ))}
       </ul>
 
-      <h3>Directions ({lang === 'en' ? 'English' : 'Native'})</h3>
-      <p>{street.directions[lang]}</p>
-
-      <h3>Landmark-Based Navigation</h3>
+      {/* GOOGLE MAPS */}
       <p>
-        To locate <b>{street.name}</b>, ask for directions near{' '}
-        <b>{street.landmarks[0]}</b>. The street is commonly known around this
-        landmark.
+        📍{' '}
+        <a href={mapLink} target="_blank" rel="noopener noreferrer">
+          Open in Google Maps
+        </a>
       </p>
 
       <hr />
