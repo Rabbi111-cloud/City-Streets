@@ -8,7 +8,7 @@
       "name": "Allen Avenue",
       "type": "major",
       "area": "Ikeja",
-      "image": "/images/lagos/allen-avenue.jpg",
+      "image": "/image/lagos/allen-avenue.jpg",
       "landmarks": ["Computer Village", "First Bank Allen"],
       "directions": {
         "en": "Allen Avenue is a bustling commercial street in Ikeja, starting from Ikeja Bus Stop and running past Computer Village, a hub for electronics and tech shops. Continuing straight, you'll see First Bank Allen branch on the right. The avenue is lined with shops, restaurants, and small offices. It connects to Opebi Road and Toyin Street, making it a major artery for commuters heading to Victoria Island or Surulere. Traffic is moderate to heavy during peak hours, and pedestrian sidewalks are available for safe walking.",
@@ -20,7 +20,7 @@
       "name": "Opebi Road",
       "type": "major",
       "area": "Ikeja",
-      "image": "/images/lagos/opebi-road.jpg",
+      "image": "/image/lagos/opebi-road.jpg",
       "landmarks": ["Spar Opebi", "Opebi Link Bridge"],
       "directions": {
         "en": "Opebi Road begins at Allen Roundabout and runs northeast towards Opebi Link Bridge. Along the way, it passes Spar Opebi, banks, and residential estates. It intersects with minor streets leading to local markets and schools. Traffic is heavy during morning and evening peak hours. Pedestrian crossings are available at key junctions. The road is vital for accessing Ikeja GRA and surrounding neighborhoods.",
@@ -32,7 +32,7 @@
       "name": "Toyin Street",
       "type": "minor",
       "area": "Ikeja",
-      "image": "/images/lagos/toyin-street.jpg",
+      "image": "/image/lagos/toyin-street.jpg",
       "landmarks": ["Toyin Bus Stop", "Sweet Sensation"],
       "directions": {
         "en": "Toyin Street branches off Allen Avenue at Toyin Bus Stop and runs past Sweet Sensation restaurant. It passes residential buildings and a few offices. The street is lightly trafficked and connects to nearby Opebi residential blocks. Ideal for pedestrians or motorbikes looking for a quieter route to central Ikeja.",
@@ -56,7 +56,7 @@
       "name": "Bode Thomas",
       "type": "major",
       "area": "Surulere",
-      "image": "/images/lagos/bode-thomas.jpg",
+      "image": "/image/lagos/bode-thomas.jpg",
       "landmarks": ["Ojuelegba", "UBA Surulere"],
       "directions": {
         "en": "Bode Thomas Street runs from Ojuelegba towards Surulere and connects with Adeniran Ogunsanya. The street is lined with banks, offices, and small eateries. Traffic is heavy during peak periods, and buses regularly ply this route. Pedestrian sidewalks exist along most parts, making walking safe. The road is vital for local commuting in Lagos Mainland.",
@@ -68,7 +68,7 @@
       "name": "Ogunlana Drive",
       "type": "major",
       "area": "Surulere",
-      "image": "/images/lagos/ogunlana-drive.jpg",
+      "image": "/image/lagos/ogunlana-drive.jpg",
       "landmarks": ["National Stadium", "Teslim Balogun Stadium"],
       "directions": {
         "en": "Ogunlana Drive begins near National Stadium and runs along Teslim Balogun Stadium. It connects Bode Thomas to other Surulere roads. The street passes through commercial and residential zones, with restaurants and shops on either side. Traffic is moderate, and it is commonly used for accessing sports facilities and markets in Surulere.",
@@ -80,7 +80,7 @@
       "name": "Adeola Odeku",
       "type": "major",
       "area": "Victoria Island",
-      "image": "/images/lagos/adeola-odeku.jpg",
+      "image": "/image/lagos/adeola-odeku.jpg",
       "landmarks": ["Mega Plaza", "Hard Rock Cafe"],
       "directions": {
         "en": "Adeola Odeku Street is a central commercial street in Victoria Island. Starting from Mega Plaza, it runs past high-end restaurants, offices, and retail stores. It intersects with Akin Adesola and Ozumba Mbadiwe, providing access to the waterfront and entertainment districts. Traffic can be heavy in the evenings, and sidewalks are well-maintained for pedestrians.",
@@ -92,7 +92,7 @@
       "name": "Ozumba Mbadiwe",
       "type": "major",
       "area": "Victoria Island",
-      "image": "/images/lagos/ozumba-mbadiwe.jpg",
+      "image": "/image/lagos/ozumba-mbadiwe.jpg",
       "landmarks": ["Civic Centre", "Landmark Beach"],
       "directions": {
         "en": "Ozumba Mbadiwe Avenue runs along the waterfront of Victoria Island, starting from Civic Centre and heading towards Landmark Beach. The street features offices, hotels, and restaurants. Traffic is moderate, and it is frequently used by tourists and business travelers. Pedestrian walkways and crossings are available, making it suitable for safe walking.",
@@ -104,7 +104,7 @@
       "name": "Akin Adesola",
       "type": "major",
       "area": "Victoria Island",
-      "image": "/images/lagos/akin-adesola.jpg",
+      "image": "/image/lagos/akin-adesola.jpg",
       "landmarks": ["Eko Hotel", "Union Bank"],
       "directions": {
         "en": "Akin Adesola runs from Eko Hotel Roundabout towards the Union Bank building. The street is lined with office buildings, retail stores, and restaurants. Traffic is moderate, with peak hours in the morning and evening. Pedestrians can use sidewalks safely, and the street connects to Adeola Odeku and Ozumba Mbadiwe for easy city access.",
