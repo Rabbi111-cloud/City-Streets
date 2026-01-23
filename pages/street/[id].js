@@ -17,7 +17,7 @@ export default function StreetPage() {
   const [saved, setSaved] = useState(false)
   const [speaking, setSpeaking] = useState(false)
 
-  // Load voices properly
+  // Load voices
   useEffect(() => {
     function loadVoices() {
       voicesCache = window.speechSynthesis.getVoices()
@@ -26,16 +26,18 @@ export default function StreetPage() {
     window.speechSynthesis.onvoiceschanged = loadVoices
   }, [])
 
-  // auto native language
+  // Auto native language
   useEffect(() => {
     if (city === 'abuja') setLang('native')
     if (city === 'lagos' || city === 'ibadan') setLang('native')
   }, [city])
 
+  // Get user
   useEffect(() => {
     supabase.auth.getUser().then(({ data }) => setUser(data.user))
   }, [])
 
+  // Load street JSON
   useEffect(() => {
     if (!id || !city) return
 
@@ -50,7 +52,7 @@ export default function StreetPage() {
       })
   }, [id, city])
 
-  // views
+  // Views counter
   useEffect(() => {
     if (!id || !city) return
     const key = `views-${city}-${id}`
@@ -59,6 +61,7 @@ export default function StreetPage() {
     setViews(count)
   }, [id, city])
 
+  // Bookmark toggle
   async function toggleBookmark() {
     if (!user) return alert('Login to save streets')
 
@@ -75,32 +78,22 @@ export default function StreetPage() {
     }
   }
 
-  // 🔊 PICK BEST VOICE
+  // 🔊 Voice: pick best voice
   function getBestVoice() {
-    if (lang === 'en') {
-      return voicesCache.find(v => v.lang.startsWith('en')) || null
-    }
-
-    if (city === 'abuja') {
-      return voicesCache.find(v => v.lang.startsWith('ha')) || null
-    }
-
+    if (lang === 'en') return voicesCache.find(v => v.lang.startsWith('en')) || null
+    if (city === 'abuja') return voicesCache.find(v => v.lang.startsWith('ha')) || null
     return voicesCache.find(v => v.lang.startsWith('yo')) || null
   }
 
-  // 🔊 SPEAK TEXT
+  // 🔊 Speak text
   function speak(text) {
     if (!text) return
-
     speechSynthesis.cancel()
-
     const utterance = new SpeechSynthesisUtterance(text)
     const voice = getBestVoice()
-
     if (voice) utterance.voice = voice
     utterance.onstart = () => setSpeaking(true)
     utterance.onend = () => setSpeaking(false)
-
     speechSynthesis.speak(utterance)
   }
 
@@ -117,15 +110,14 @@ export default function StreetPage() {
     setSpeaking(false)
   }
 
-  // 🔊 LANDMARK VOICE
+  // 🔊 Speak landmarks correctly
   function speakLandmarks() {
     if (!street?.landmarks?.length) return
-
+    const landmarksText = street.landmarks.map(l => (l.name ? l.name : l)).join(', ')
     const text =
       lang === 'en'
-        ? `Landmarks include ${street.landmarks.map(l => l.name).join(', ')}`
-        : `Awọn ami-aye pataki ni ${street.landmarks.map(l => l.name).join(', ')}`
-
+        ? `Landmarks include ${landmarksText}`
+        : `Awọn ami-aye pataki ni ${landmarksText}`
     speak(text)
   }
 
@@ -166,16 +158,12 @@ export default function StreetPage() {
 
       {/* LANDMARK VOICE */}
       {street.landmarks && (
-        <button onClick={speakLandmarks}>
-          📍 Listen to landmarks
-        </button>
+        <button onClick={speakLandmarks}>📍 Listen to landmarks</button>
       )}
 
       <br /><br />
 
-      <a href={mapLink} target="_blank">
-        Open in Google Maps
-      </a>
+      <a href={mapLink} target="_blank">Open in Google Maps</a>
 
       <hr />
 
