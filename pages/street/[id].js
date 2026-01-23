@@ -1,56 +1,79 @@
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
+import Link from 'next/link'
 
 export default function StreetPage() {
   const router = useRouter()
-  const { id } = router.query
+  const { id, city } = router.query
+
   const [street, setStreet] = useState(null)
-  const [city, setCity] = useState(null)
-  const [lang, setLang] = useState('en') // default English
+  const [streets, setStreets] = useState([])
 
   useEffect(() => {
-    if (!id || !router.query.city) return
+    if (!id || !city) return
 
-    const citySlug = router.query.city
-
-    fetch(`/data/cities/${citySlug}.json`)
+    fetch(`/data/cities/${city}.json`)
       .then(res => res.json())
       .then(data => {
-        setCity(data.city)
-        const found = data.streets.find(s => s.id === id)
-        if (found) setStreet(found)
-      })
-  }, [id, router.query.city])
+        const sorted = data.streets.sort((a, b) =>
+          a.name.localeCompare(b.name)
+        )
 
-  if (!street) return <p>Loading street info...</p>
+        setStreets(sorted)
+
+        const found = sorted.find(s => s.id === id)
+        setStreet(found)
+      })
+  }, [id, city])
+
+  if (!street) return <p>Loading street...</p>
+
+  const currentIndex = streets.findIndex(s => s.id === id)
+  const prevStreet = streets[currentIndex - 1]
+  const nextStreet = streets[currentIndex + 1]
 
   return (
-    <div style={{ maxWidth: '700px', margin: 'auto', padding: '20px' }}>
+    <div style={{ maxWidth: 600, margin: 'auto' }}>
       <h1>{street.name}</h1>
-      <h3>City: {city}</h3>
+      <p><b>Area:</b> {street.area}</p>
 
-      <img 
-        src={street.image} 
-        alt={street.name} 
-        style={{ width: '100%', borderRadius: '8px', marginBottom: '20px' }} 
+      <img
+        src={street.image}
+        alt={street.name}
+        style={{ width: '100%', marginBottom: 16 }}
       />
 
-      <h4>Landmarks:</h4>
+      <h3>Landmarks</h3>
       <ul>
-        {street.landmarks.map((lm, i) => (
-          <li key={i}>{lm}</li>
+        {street.landmarks.map(l => (
+          <li key={l}>{l}</li>
         ))}
       </ul>
 
-      <h4>Directions & Description:</h4>
-      <p>{street.directions[lang]}</p>
+      <h3>Directions (English)</h3>
+      <p>{street.directions.en}</p>
 
-      <button 
-        onClick={() => setLang(lang === 'en' ? Object.keys(street.directions).find(k => k !== 'en') : 'en')}
-        style={{ marginTop: '15px', padding: '10px 15px', borderRadius: '5px', cursor: 'pointer' }}
-      >
-        Switch to {lang === 'en' ? 'Native Language' : 'English'}
-      </button>
+      <h3>Directions (Native)</h3>
+      <p>{street.directions.yo}</p>
+
+      <hr />
+
+      {/* NAVIGATION */}
+      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+        {prevStreet ? (
+          <Link href={`/street/${prevStreet.id}?city=${city}`}>
+            ← {prevStreet.name}
+          </Link>
+        ) : <span />}
+
+        <Link href={`/city/${city}`}>Back to {city}</Link>
+
+        {nextStreet ? (
+          <Link href={`/street/${nextStreet.id}?city=${city}`}>
+            {nextStreet.name} →
+          </Link>
+        ) : <span />}
+      </div>
     </div>
   )
 }
