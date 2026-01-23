@@ -52,16 +52,35 @@ export default function StreetPage() {
     if (!user) return alert('Login to save streets')
 
     if (saved) {
-      await supabase.from('bookmarks')
+      await supabase
+        .from('bookmarks')
         .delete()
         .eq('user_id', user.id)
         .eq('street_id', id)
       setSaved(false)
     } else {
-      await supabase.from('bookmarks')
+      await supabase
+        .from('bookmarks')
         .insert({ user_id: user.id, city, street_id: id })
       setSaved(true)
     }
+  }
+
+  // 🔊 VOICE DIRECTIONS
+  function speakDirections() {
+    if (!street) return
+
+    const utterance = new SpeechSynthesisUtterance(
+      street.directions[lang]
+    )
+
+    // language hint (browser chooses closest available)
+    if (lang === 'en') utterance.lang = 'en-US'
+    else if (city === 'abuja') utterance.lang = 'ha-NG'
+    else utterance.lang = 'yo-NG'
+
+    speechSynthesis.cancel()
+    speechSynthesis.speak(utterance)
   }
 
   if (!street) return <p>Loading…</p>
@@ -91,14 +110,33 @@ export default function StreetPage() {
 
       <p>{street.directions[lang]}</p>
 
-      <a href={mapLink} target="_blank">Open in Google Maps</a>
+      {/* 🔊 VOICE BUTTON */}
+      <button onClick={speakDirections}>
+        🔊 Listen to directions
+      </button>
+
+      <br /><br />
+
+      <a href={mapLink} target="_blank">
+        Open in Google Maps
+      </a>
 
       <hr />
 
       <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-        {prev && <Link href={`/street/${prev.id}?city=${city}`}>← {prev.name}</Link>}
+        {prev && (
+          <Link href={`/street/${prev.id}?city=${city}`}>
+            ← {prev.name}
+          </Link>
+        )}
+
         <Link href={`/city/${city}`}>Back</Link>
-        {next && <Link href={`/street/${next.id}?city=${city}`}>{next.name} →</Link>}
+
+        {next && (
+          <Link href={`/street/${next.id}?city=${city}`}>
+            {next.name} →
+          </Link>
+        )}
       </div>
     </div>
   )
