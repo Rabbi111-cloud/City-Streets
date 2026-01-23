@@ -8,7 +8,7 @@
       "name": "Ahmadu Bello Way",
       "type": "major",
       "area": "Central Area",
-      "image": "/images/abuja/ahmadu-bello-way.jpg",
+      "image": "/image/abuja/ahmadu-bello-way.jpg",
       "landmarks": ["Eagle Square", "NNPC Towers", "Unity Fountain"],
       "directions": {
         "en": "Ahmadu Bello Way runs through the heart of Abuja’s Central Area, starting from Eagle Square and passing government offices, NNPC Towers, and Unity Fountain. It connects to Herbert Macaulay Way and Tafawa Balewa Way. Traffic is heavy during office hours, but pedestrian bridges and crossings ensure safe walking. The street features commercial, diplomatic, and cultural landmarks, making it central to city navigation.",
@@ -20,7 +20,7 @@
       "name": "Aminu Kano Crescent",
       "type": "major",
       "area": "Central Area",
-      "image": "/images/abuja/aminu-kano-crescent.jpg",
+      "image": "/image/abuja/aminu-kano-crescent.jpg",
       "landmarks": ["Sheraton Hotel", "Silverbird Cinemas", "National Mosque"],
       "directions": {
         "en": "Aminu Kano Crescent is a crescent-shaped street connecting Sheraton Hotel area to Silverbird Cinemas. It passes diplomatic houses, embassies, and cafes. Traffic is moderate, and sidewalks are available for pedestrians. The street is known for evening strolls and easy access to nearby restaurants and office buildings.",
@@ -32,7 +32,7 @@
       "name": "Herbert Macaulay Way",
       "type": "major",
       "area": "Central Area",
-      "image": "/images/abuja/herbert-macaulay-way.jpg",
+      "image": "/image/abuja/herbert-macaulay-way.jpg",
       "landmarks": ["Unity Fountain", "Central Bank", "FCT Secretariat"],
       "directions": {
         "en": "Herbert Macaulay Way connects Ahmadu Bello Way to Tafawa Balewa Way, passing Unity Fountain, Central Bank, and FCT Secretariat. It is heavily used by commuters and features traffic lights at major intersections. Sidewalks and pedestrian crossings make it safe for walking. The road is essential for reaching government offices and central business areas.",
@@ -44,7 +44,7 @@
       "name": "Tafawa Balewa Way",
       "type": "major",
       "area": "Central Area",
-      "image": "/images/abuja/tafawa-balewa-way.jpg",
+      "image": "/image/abuja/tafawa-balewa-way.jpg",
       "landmarks": ["Eagle Square", "Nigerian National Mosque", "Unity Fountain"],
       "directions": {
         "en": "Tafawa Balewa Way starts from the National Mosque and runs through central business districts to Eagle Square. The road is lined with banks, offices, and commercial centers. Traffic is moderate during off-peak hours but can get heavy during special events. Pedestrian bridges and zebra crossings make walking safer. The street connects to several minor streets leading to local markets and residential areas.",
@@ -56,7 +56,7 @@
       "name": "Gana Street",
       "type": "minor",
       "area": "Central Area",
-      "image": "/images/abuja/gana-street.jpg",
+      "image": "/image/abuja/gana-street.jpg",
       "landmarks": ["Embassy Quarter", "Private Residences"],
       "directions": {
         "en": "Gana Street is a quiet minor street within the diplomatic district. It runs between embassy buildings and residential houses. Traffic is light, mostly local residents. Pedestrian sidewalks are available, and it connects to larger streets like Aminu Kano Crescent for access to central amenities.",
@@ -68,7 +68,7 @@
       "name": "Adetokunbo Ademola Crescent",
       "type": "major",
       "area": "Central Area",
-      "image": "/images/abuja/adetokunbo-ademola-crescent.jpg",
+      "image": "/image/abuja/adetokunbo-ademola-crescent.jpg",
       "landmarks": ["FCT High Court", "Embassy of France"],
       "directions": {
         "en": "Adetokunbo Ademola Crescent curves through central diplomatic and residential areas, connecting various embassies, FCT High Court, and local businesses. The street sees moderate traffic, with pedestrian pathways and some green spaces along the route. It provides a scenic and safe passage for residents and visitors alike.",
@@ -80,7 +80,7 @@
       "name": "Olusegun Obasanjo Way",
       "type": "major",
       "area": "Central Area",
-      "image": "/images/abuja/olusegun-obasanjo-way.jpg",
+      "image": "/image/abuja/olusegun-obasanjo-way.jpg",
       "landmarks": ["Central Market", "Nigerian National Theatre"],
       "directions": {
         "en": "Olusegun Obasanjo Way runs through commercial and residential areas, linking central Abuja to surrounding districts. The street features banks, shops, and eateries. Traffic is moderate, with peak congestion during morning and evening hours. Pedestrian sidewalks are present along most stretches, making it safe for walking. It is widely used by local residents and visitors.",
@@ -92,7 +92,7 @@
       "name": "Nnamdi Azikiwe Expressway",
       "type": "major",
       "area": "Airport Road Area",
-      "image": "/images/abuja/nnamdi-azikiwe-expressway.jpg",
+      "image": "/image/abuja/nnamdi-azikiwe-expressway.jpg",
       "landmarks": ["Nnamdi Azikiwe International Airport", "Jabi Lake Mall"],
       "directions": {
         "en": "Nnamdi Azikiwe Expressway connects the airport area to central Abuja. Starting near the airport, it passes hotels, office buildings, and shopping malls like Jabi Lake Mall. Traffic is heavy during peak hours. Pedestrian crossings are limited, so walking is mostly for sidewalks. The expressway is vital for travelers coming in and out of the city.",
@@ -104,7 +104,7 @@
       "name": "Independence Avenue",
       "type": "major",
       "area": "Central Area",
-      "image": "/images/abuja/independence-avenue.jpg",
+      "image": "/image/abuja/independence-avenue.jpg",
       "landmarks": ["Presidential Villa", "National Assembly"],
       "directions": {
         "en": "Independence Avenue runs through the government district, connecting the Presidential Villa to the National Assembly. The street is lined with government buildings, embassies, and security checkpoints. Traffic is strictly controlled, with pedestrian access limited to designated sidewalks. The avenue is key for official travel and ceremonial events.",
