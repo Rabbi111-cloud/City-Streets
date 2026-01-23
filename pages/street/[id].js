@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { supabase } from '../../lib/supabase'
 
+let voicesCache = []
+
 export default function StreetPage() {
   const router = useRouter()
   const { id, city } = router.query
@@ -13,6 +15,16 @@ export default function StreetPage() {
   const [views, setViews] = useState(0)
   const [user, setUser] = useState(null)
   const [saved, setSaved] = useState(false)
+  const [speaking, setSpeaking] = useState(false)
+
+  // Load voices properly
+  useEffect(() => {
+    function loadVoices() {
+      voicesCache = window.speechSynthesis.getVoices()
+    }
+    loadVoices()
+    window.speechSynthesis.onvoiceschanged = loadVoices
+  }, [])
 
   // auto native language
   useEffect(() => {
@@ -47,40 +59,74 @@ export default function StreetPage() {
     setViews(count)
   }, [id, city])
 
-  // bookmarks
   async function toggleBookmark() {
     if (!user) return alert('Login to save streets')
 
     if (saved) {
-      await supabase
-        .from('bookmarks')
+      await supabase.from('bookmarks')
         .delete()
         .eq('user_id', user.id)
         .eq('street_id', id)
       setSaved(false)
     } else {
-      await supabase
-        .from('bookmarks')
+      await supabase.from('bookmarks')
         .insert({ user_id: user.id, city, street_id: id })
       setSaved(true)
     }
   }
 
-  // 🔊 VOICE DIRECTIONS
-  function speakDirections() {
-    if (!street) return
+  // 🔊 PICK BEST VOICE
+  function getBestVoice() {
+    if (lang === 'en') {
+      return voicesCache.find(v => v.lang.startsWith('en')) || null
+    }
 
-    const utterance = new SpeechSynthesisUtterance(
-      street.directions[lang]
-    )
+    if (city === 'abuja') {
+      return voicesCache.find(v => v.lang.startsWith('ha')) || null
+    }
 
-    // language hint (browser chooses closest available)
-    if (lang === 'en') utterance.lang = 'en-US'
-    else if (city === 'abuja') utterance.lang = 'ha-NG'
-    else utterance.lang = 'yo-NG'
+    return voicesCache.find(v => v.lang.startsWith('yo')) || null
+  }
+
+  // 🔊 SPEAK TEXT
+  function speak(text) {
+    if (!text) return
 
     speechSynthesis.cancel()
+
+    const utterance = new SpeechSynthesisUtterance(text)
+    const voice = getBestVoice()
+
+    if (voice) utterance.voice = voice
+    utterance.onstart = () => setSpeaking(true)
+    utterance.onend = () => setSpeaking(false)
+
     speechSynthesis.speak(utterance)
+  }
+
+  function pauseSpeech() {
+    if (speechSynthesis.speaking) speechSynthesis.pause()
+  }
+
+  function resumeSpeech() {
+    if (speechSynthesis.paused) speechSynthesis.resume()
+  }
+
+  function stopSpeech() {
+    speechSynthesis.cancel()
+    setSpeaking(false)
+  }
+
+  // 🔊 LANDMARK VOICE
+  function speakLandmarks() {
+    if (!street?.landmarks?.length) return
+
+    const text =
+      lang === 'en'
+        ? `Landmarks include ${street.landmarks.map(l => l.name).join(', ')}`
+        : `Awọn ami-aye pataki ni ${street.landmarks.map(l => l.name).join(', ')}`
+
+    speak(text)
   }
 
   if (!street) return <p>Loading…</p>
@@ -110,10 +156,20 @@ export default function StreetPage() {
 
       <p>{street.directions[lang]}</p>
 
-      {/* 🔊 VOICE BUTTON */}
-      <button onClick={speakDirections}>
-        🔊 Listen to directions
-      </button>
+      {/* VOICE CONTROLS */}
+      <div style={{ marginBottom: 10 }}>
+        <button onClick={() => speak(street.directions[lang])}>🔊 Play</button>
+        <button onClick={pauseSpeech} disabled={!speaking}>⏸ Pause</button>
+        <button onClick={resumeSpeech}>▶ Resume</button>
+        <button onClick={stopSpeech}>⏹ Stop</button>
+      </div>
+
+      {/* LANDMARK VOICE */}
+      {street.landmarks && (
+        <button onClick={speakLandmarks}>
+          📍 Listen to landmarks
+        </button>
+      )}
 
       <br /><br />
 
@@ -124,19 +180,9 @@ export default function StreetPage() {
       <hr />
 
       <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-        {prev && (
-          <Link href={`/street/${prev.id}?city=${city}`}>
-            ← {prev.name}
-          </Link>
-        )}
-
+        {prev && <Link href={`/street/${prev.id}?city=${city}`}>← {prev.name}</Link>}
         <Link href={`/city/${city}`}>Back</Link>
-
-        {next && (
-          <Link href={`/street/${next.id}?city=${city}`}>
-            {next.name} →
-          </Link>
-        )}
+        {next && <Link href={`/street/${next.id}?city=${city}`}>{next.name} →</Link>}
       </div>
     </div>
   )
