@@ -3,8 +3,6 @@ import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { supabase } from '../../lib/supabase'
 
-let voicesCache = []
-
 export default function StreetPage() {
   const router = useRouter()
   const { id, city } = router.query
@@ -15,29 +13,19 @@ export default function StreetPage() {
   const [views, setViews] = useState(0)
   const [user, setUser] = useState(null)
   const [saved, setSaved] = useState(false)
-  const [speaking, setSpeaking] = useState(false)
 
-  // Load voices
+  // auto native language
   useEffect(() => {
-    function loadVoices() {
-      voicesCache = window.speechSynthesis.getVoices()
-    }
-    loadVoices()
-    window.speechSynthesis.onvoiceschanged = loadVoices
-  }, [])
-
-  // Auto native language
-  useEffect(() => {
-    if (city === 'abuja') setLang('native')
-    if (city === 'lagos' || city === 'ibadan') setLang('native')
+    if (!city) return
+    setLang('en') // default English
   }, [city])
 
-  // Get user
+  // get logged-in user
   useEffect(() => {
     supabase.auth.getUser().then(({ data }) => setUser(data.user))
   }, [])
 
-  // Load street JSON
+  // load street data
   useEffect(() => {
     if (!id || !city) return
 
@@ -52,7 +40,7 @@ export default function StreetPage() {
       })
   }, [id, city])
 
-  // Views counter
+  // views counter
   useEffect(() => {
     if (!id || !city) return
     const key = `views-${city}-${id}`
@@ -61,7 +49,7 @@ export default function StreetPage() {
     setViews(count)
   }, [id, city])
 
-  // Bookmark toggle
+  // bookmarks
   async function toggleBookmark() {
     if (!user) return alert('Login to save streets')
 
@@ -76,49 +64,6 @@ export default function StreetPage() {
         .insert({ user_id: user.id, city, street_id: id })
       setSaved(true)
     }
-  }
-
-  // 🔊 Voice: pick best voice
-  function getBestVoice() {
-    if (lang === 'en') return voicesCache.find(v => v.lang.startsWith('en')) || null
-    if (city === 'abuja') return voicesCache.find(v => v.lang.startsWith('ha')) || null
-    return voicesCache.find(v => v.lang.startsWith('yo')) || null
-  }
-
-  // 🔊 Speak text
-  function speak(text) {
-    if (!text) return
-    speechSynthesis.cancel()
-    const utterance = new SpeechSynthesisUtterance(text)
-    const voice = getBestVoice()
-    if (voice) utterance.voice = voice
-    utterance.onstart = () => setSpeaking(true)
-    utterance.onend = () => setSpeaking(false)
-    speechSynthesis.speak(utterance)
-  }
-
-  function pauseSpeech() {
-    if (speechSynthesis.speaking) speechSynthesis.pause()
-  }
-
-  function resumeSpeech() {
-    if (speechSynthesis.paused) speechSynthesis.resume()
-  }
-
-  function stopSpeech() {
-    speechSynthesis.cancel()
-    setSpeaking(false)
-  }
-
-  // 🔊 Speak landmarks correctly
-  function speakLandmarks() {
-    if (!street?.landmarks?.length) return
-    const landmarksText = street.landmarks.map(l => (l.name ? l.name : l)).join(', ')
-    const text =
-      lang === 'en'
-        ? `Landmarks include ${landmarksText}`
-        : `Awọn ami-aye pataki ni ${landmarksText}`
-    speak(text)
   }
 
   if (!street) return <p>Loading…</p>
@@ -146,24 +91,25 @@ export default function StreetPage() {
         {saved ? '★ Saved' : '☆ Save'}
       </button>
 
-      <p>{street.directions[lang]}</p>
+      {/* ✅ SHOW DIRECTIONS */}
+      <p>{street.directions[lang] || street.directions['en']}</p>
 
-      {/* VOICE CONTROLS */}
-      <div style={{ marginBottom: 10 }}>
-        <button onClick={() => speak(street.directions[lang])}>🔊 Play</button>
-        <button onClick={pauseSpeech} disabled={!speaking}>⏸ Pause</button>
-        <button onClick={resumeSpeech}>▶ Resume</button>
-        <button onClick={stopSpeech}>⏹ Stop</button>
-      </div>
-
-      {/* LANDMARK VOICE */}
-      {street.landmarks && (
-        <button onClick={speakLandmarks}>📍 Listen to landmarks</button>
+      {/* ✅ LANDMARKS AS WRITTEN */}
+      {street.landmarks && street.landmarks.length > 0 && (
+        <div>
+          <h3>Landmarks:</h3>
+          <ul>
+            {street.landmarks.map((l, i) => (
+              <li key={i}>{l.name ? l.name : l}</li>
+            ))}
+          </ul>
+        </div>
       )}
 
-      <br /><br />
-
-      <a href={mapLink} target="_blank">Open in Google Maps</a>
+      <br />
+      <a href={mapLink} target="_blank">
+        Open in Google Maps
+      </a>
 
       <hr />
 
