@@ -3,49 +3,49 @@ import { useEffect, useState } from 'react'
 import Link from 'next/link'
 
 export default function CityPage() {
-  const router = useRouter()
-  const { slug } = router.query
-
-  const [cityData, setCityData] = useState(null)
-  const [search, setSearch] = useState('')
+  const { slug } = useRouter().query
+  const [city, setCity] = useState(null)
 
   useEffect(() => {
     if (!slug) return
-
     fetch(`/data/cities/${slug}.json`)
-      .then(res => res.json())
-      .then(data => {
-        data.streets.sort((a, b) => a.name.localeCompare(b.name))
-        setCityData(data)
-      })
+      .then(r => r.json())
+      .then(setCity)
   }, [slug])
 
-  if (!cityData) return <p>Loading city...</p>
+  if (!city) return <p>Loading…</p>
 
-  const filteredStreets = cityData.streets.filter(street =>
-    street.name.toLowerCase().includes(search.toLowerCase())
-  )
+  const withViews = city.streets.map(s => ({
+    ...s,
+    views: Number(localStorage.getItem(`views-${slug}-${s.id}`) || 0)
+  }))
+
+  const top = [...withViews].sort((a, b) => b.views - a.views).slice(0, 5)
 
   return (
     <div style={{ maxWidth: 600, margin: 'auto' }}>
-      <h1>{cityData.city}</h1>
+      <h1>{city.city}</h1>
 
-      <input
-        placeholder="Search streets..."
-        value={search}
-        onChange={e => setSearch(e.target.value)}
-        style={{ width: '100%', padding: 8, marginBottom: 12 }}
-      />
-
+      <h3>🔥 Most Viewed Streets</h3>
       <ul>
-        {filteredStreets.map(street => (
-          <li key={street.id}>
-            <Link href={`/street/${street.id}?city=${slug}`}>
-              {street.name} ({street.type})
+        {top.map(s => (
+          <li key={s.id}>
+            <Link href={`/street/${s.id}?city=${slug}`}>
+              {s.name} ({s.views})
             </Link>
+          </li>
+        ))}
+      </ul>
+
+      <h3>All Streets</h3>
+      <ul>
+        {withViews.map(s => (
+          <li key={s.id}>
+            <Link href={`/street/${s.id}?city=${slug}`}>{s.name}</Link>
           </li>
         ))}
       </ul>
     </div>
   )
 }
+
