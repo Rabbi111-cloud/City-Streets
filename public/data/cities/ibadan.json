@@ -8,7 +8,7 @@
       "name": "Ring Road",
       "type": "major",
       "area": "Ibadan North",
-      "image": "/images/ibadan/ring-road.jpg",
+      "image": "/image/ibadan/ring-road.jpg",
       "landmarks": ["Challenge Roundabout", "Dugbe Market", "UI Gate"],
       "directions": {
         "en": "Ring Road is a circular route encircling central Ibadan, connecting Challenge Roundabout, Dugbe Market, and UI Gate. It is one of the busiest roads in the city, lined with markets, bus stops, and shops. Traffic can be heavy, especially during morning and evening rush hours. Pedestrian crossings exist at major intersections. The road is essential for commuters moving between north, south, east, and west Ibadan.",
@@ -20,7 +20,7 @@
       "name": "Dugbe–Mokola Road",
       "type": "major",
       "area": "Dugbe",
-      "image": "/images/ibadan/dugbe-mokola-road.jpg",
+      "image": "/image/ibadan/dugbe-mokola-road.jpg",
       "landmarks": ["Dugbe Market", "Mokola Roundabout", "Access Bank Dugbe"],
       "directions": {
         "en": "Dugbe–Mokola Road starts at Dugbe Market and runs east to Mokola Roundabout. It passes commercial hubs, banks, and schools. Traffic is moderate, with busy pedestrian crossings near Dugbe Market. This road is key for reaching southern Ibadan and connects to several minor streets leading to residential neighborhoods.",
@@ -32,7 +32,7 @@
       "name": "Iwo Road",
       "type": "major",
       "area": "Ibadan South",
-      "image": "/images/ibadan/iwo-road.jpg",
+      "image": "/image/ibadan/iwo-road.jpg",
       "landmarks": ["Agodi Gardens", "University of Ibadan Main Gate"],
       "directions": {
         "en": "Iwo Road begins near Agodi Gardens and runs towards the University of Ibadan Main Gate. It is lined with shops, eateries, and residential estates. Traffic is moderate, with increased congestion during university hours. Pedestrian sidewalks are available. The road connects to several minor streets leading to Ibadan South neighborhoods.",
@@ -44,7 +44,7 @@
       "name": "Bodija Road",
       "type": "major",
       "area": "Bodija",
-      "image": "/images/ibadan/bodija-road.jpg",
+      "image": "/image/ibadan/bodija-road.jpg",
       "landmarks": ["Bodija Market", "Shoprite Bodija", "St. Luke Church"],
       "directions": {
         "en": "Bodija Road starts at Bodija Market and runs through the Bodija area, passing residential estates, shopping centers, and churches. Traffic is moderate, with occasional congestion during market days. Pedestrian walkways are available. This street is essential for reaching central and southern Ibadan neighborhoods.",
@@ -56,7 +56,7 @@
       "name": "Secretariat Road",
       "type": "minor",
       "area": "Ibadan Central",
-      "image": "/images/ibadan/secretariat-road.jpg",
+      "image": "/image/ibadan/secretariat-road.jpg",
       "landmarks": ["Ibadan Secretariat", "Post Office"],
       "directions": {
         "en": "Secretariat Road runs past the Ibadan Secretariat and Post Office. It is a minor street with light traffic, mostly used by government staff and local residents. Pedestrian sidewalks are present. The road connects to larger streets such as Ring Road for broader city access.",
@@ -68,7 +68,7 @@
       "name": "Challenge–Odo Ona Road",
       "type": "major",
       "area": "Challenge",
-      "image": "/images/ibadan/challenge-odo-ona-road.jpg",
+      "image": "/image/ibadan/challenge-odo-ona-road.jpg",
       "landmarks": ["Challenge Roundabout", "Odo Ona Market"],
       "directions": {
         "en": "Challenge–Odo Ona Road begins at Challenge Roundabout and extends to Odo Ona Market. It passes residential areas and small commercial shops. Traffic is moderate, with bus stops along the way. Pedestrian walkways exist. This road provides access to northern and central parts of Ibadan.",
@@ -80,7 +80,7 @@
       "name": "Oke Ado Road",
       "type": "major",
       "area": "Oke Ado",
-      "image": "/images/ibadan/oke-ado-road.jpg",
+      "image": "/image/ibadan/oke-ado-road.jpg",
       "landmarks": ["Oke Ado Market", "Primary School"],
       "directions": {
         "en": "Oke Ado Road runs through the Oke Ado neighborhood, connecting residential estates, schools, and markets. Traffic is moderate. Pedestrian sidewalks are available. It serves as a key connector between northern Ibadan and central districts.",
@@ -92,7 +92,7 @@
       "name": "Apata Road",
       "type": "major",
       "area": "Apata",
-      "image": "/images/ibadan/apata-road.jpg",
+      "image": "/image/ibadan/apata-road.jpg",
       "landmarks": ["Apata Market", "Churches", "Schools"],
       "directions": {
         "en": "Apata Road starts from Apata Market and runs through residential neighborhoods, passing churches and schools. Traffic is moderate. Sidewalks are available for pedestrians. It connects to major streets like Ring Road and Dugbe–Mokola Road.",
@@ -104,7 +104,7 @@
       "name": "Eleyele Road",
       "type": "major",
       "area": "Eleyele",
-      "image": "/images/ibadan/eleyele-road.jpg",
+      "image": "/image/ibadan/eleyele-road.jpg",
       "landmarks": ["Eleyele Market", "Eleyele Stadium"],
       "directions": {
         "en": "Eleyele Road runs through Eleyele neighborhood, connecting markets, stadiums, and residential areas. Traffic is moderate, with pedestrian crossings at major junctions. The street connects to southern Ibadan and serves as a key commuter route.",
