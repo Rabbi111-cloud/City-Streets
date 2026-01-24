@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import '../public/style.css'
+import '../styles/style.css'
 
 export default function App({ Component, pageProps }) {
   useEffect(() => {
