@@ -7,15 +7,12 @@ export default function Home() {
         <h1 className="title">City Streets 🌍</h1>
 
         <p className="subtitle">
-          Find streets using landmarks and native languages across Nigeria.
+          Find streets using landmarks and native languages.
         </p>
 
         <Link href="/signup">
-          <a
-            className="btn btn-primary"
-            style={{ width: '100%', marginBottom: 12 }}
-          >
-            Create Account
+          <a className="btn btn-primary" style={{ width: '100%', marginBottom: 12 }}>
+            Sign Up
           </a>
         </Link>
 
