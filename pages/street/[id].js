@@ -112,18 +112,21 @@ export default function StreetPage() {
   )}`
 
   return (
-    <div style={{ maxWidth: 600, margin: 'auto', padding: 16 }}>
-      <h1>{street.name}</h1>
-      <p>👀 Viewed {views} times</p>
+    <div style={{ maxWidth: 650, margin: 'auto', padding: 20, fontFamily: 'system-ui, sans-serif' }}>
+      
+      {/* Street Header */}
+      <h1 style={{ fontSize: 32, fontWeight: 700, marginBottom: 10 }}>{street.name}</h1>
+      <p style={{ color: '#555', marginBottom: 20 }}>👀 Viewed {views} times</p>
 
-      {/* Street image */}
+      {/* Street Image */}
       <img
         src={street.image || 'https://via.placeholder.com/600x400'}
-        style={{ width: '100%', borderRadius: 16, marginBottom: 16 }}
+        alt={street.name}
+        style={{ width: '100%', borderRadius: 16, marginBottom: 20, boxShadow: '0 10px 20px rgba(0,0,0,0.1)' }}
       />
 
-      {/* Buttons */}
-      <div style={{ marginBottom: 12 }}>
+      {/* Action Buttons */}
+      <div style={{ marginBottom: 20, display: 'flex', flexWrap: 'wrap', gap: 8 }}>
         <button
           className="btn btn-primary"
           onClick={() => setLang(lang === 'en' ? 'native' : 'en')}
@@ -133,7 +136,6 @@ export default function StreetPage() {
 
         <button
           className="btn btn-secondary"
-          style={{ marginLeft: 10 }}
           onClick={toggleBookmark}
         >
           {saved ? '★ Saved' : '☆ Save'}
@@ -141,24 +143,16 @@ export default function StreetPage() {
 
         {lang === 'en' && (
           <>
-            <button className="btn btn-primary" onClick={playVoice} style={{ marginLeft: 10 }}>
-              ▶ Play
-            </button>
-            <button className="btn btn-secondary" onClick={pauseVoice} style={{ marginLeft: 5 }}>
-              ⏸ Pause
-            </button>
-            <button className="btn btn-primary" onClick={resumeVoice} style={{ marginLeft: 5 }}>
-              ▶ Resume
-            </button>
-            <button className="btn btn-secondary" onClick={stopVoice} style={{ marginLeft: 5 }}>
-              ■ Stop
-            </button>
+            <button className="btn btn-primary" onClick={playVoice}>▶ Play</button>
+            <button className="btn btn-secondary" onClick={pauseVoice}>⏸ Pause</button>
+            <button className="btn btn-primary" onClick={resumeVoice}>▶ Resume</button>
+            <button className="btn btn-secondary" onClick={stopVoice}>■ Stop</button>
           </>
         )}
       </div>
 
       {/* Directions */}
-      <p style={{ lineHeight: '1.7em', marginBottom: 20 }}>
+      <p style={{ fontSize: 16, lineHeight: 1.7, marginBottom: 20 }}>
         {lang === 'en'
           ? street.directions.en
           : street.directions.native || 'No native directions available'}
@@ -167,44 +161,57 @@ export default function StreetPage() {
       {/* Landmarks */}
       {street.landmarks && street.landmarks.length > 0 && (
         <div style={{ marginBottom: 20 }}>
-          <h3>Landmarks:</h3>
-          <ul>
+          <h3 style={{ fontSize: 20, marginBottom: 10 }}>Landmarks</h3>
+          <ul style={{ paddingLeft: 20 }}>
             {street.landmarks.map((l, i) => (
-              <li key={i}>{l.name ? l.name : l}</li>
+              <li key={i} style={{ marginBottom: 4 }}>{l.name ? l.name : l}</li>
             ))}
           </ul>
         </div>
       )}
 
-      {/* Google Maps link */}
+      {/* Google Maps */}
       <a
         href={mapLink}
         target="_blank"
         className="btn btn-primary"
-        style={{ width: '100%', textAlign: 'center', marginBottom: 20 }}
+        style={{
+          display: 'block',
+          textAlign: 'center',
+          padding: '12px 0',
+          borderRadius: 12,
+          marginBottom: 20,
+          textDecoration: 'none',
+          backgroundColor: '#4f46e5',
+          color: '#fff',
+          fontWeight: 600
+        }}
       >
         Open in Google Maps
       </a>
 
-      <hr />
+      <hr style={{ margin: '20px 0' }} />
 
       {/* Navigation */}
-      <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: 8 }}>
         {prev && (
           <Link href={`/street/${prev.id}?city=${city}`}>
-            <a className="btn btn-secondary" style={{ flex: 1, marginRight: 6, marginBottom: 6 }}>
+            <a className="btn btn-secondary" style={{ flex: 1, textAlign: 'center', padding: '12px 0', borderRadius: 12 }}>
               ← {prev.name}
             </a>
           </Link>
         )}
+
+        {/* City button */}
         <Link href={`/city/${city}`}>
-          <a className="btn btn-secondary" style={{ flex: 1, margin: '0 6px', marginBottom: 6 }}>
-            Back to Streets
+          <a className="btn btn-primary" style={{ flex: 1, textAlign: 'center', padding: '12px 0', borderRadius: 12 }}>
+            🏙 View All Streets in {city.charAt(0).toUpperCase() + city.slice(1)}
           </a>
         </Link>
+
         {next && (
           <Link href={`/street/${next.id}?city=${city}`}>
-            <a className="btn btn-secondary" style={{ flex: 1, marginLeft: 6, marginBottom: 6 }}>
+            <a className="btn btn-secondary" style={{ flex: 1, textAlign: 'center', padding: '12px 0', borderRadius: 12 }}>
               {next.name} →
             </a>
           </Link>
@@ -213,3 +220,4 @@ export default function StreetPage() {
     </div>
   )
 }
+
