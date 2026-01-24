@@ -202,10 +202,10 @@ export default function StreetPage() {
           </Link>
         )}
 
-        {/* City button */}
-        <Link href={`/city/${city}`}>
+        {/* Button to go back to all cities dashboard */}
+        <Link href="/dashboard">
           <a className="btn btn-primary" style={{ flex: 1, textAlign: 'center', padding: '12px 0', borderRadius: 12 }}>
-            🏙 View All Streets in {city.charAt(0).toUpperCase() + city.slice(1)}
+            🏙 Back to All Cities
           </a>
         </Link>
 
@@ -220,4 +220,3 @@ export default function StreetPage() {
     </div>
   )
 }
-
