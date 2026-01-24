@@ -14,24 +14,47 @@ export default function Dashboard() {
       } else {
         fetch('/data/cities/index.json')
           .then(res => res.json())
-          .then(data => setCities(data))
+          .then(data => {
+            // supports both { cities: [...] } or [...]
+            const list = data.cities || data
+            const sorted = list.sort((a, b) =>
+              a.name.localeCompare(b.name)
+            )
+            setCities(sorted)
+          })
       }
     })
   }, [])
 
   return (
     <div>
-      <h1>Select a City</h1>
+      <div style={{ padding: '30px 30px 10px' }}>
+        <h1 className="title">Select a City</h1>
+        <p className="subtitle">
+          Explore streets, landmarks and directions
+        </p>
+      </div>
 
-      <ul>
+      <div className="grid">
         {cities.map(city => (
-          <li key={city.slug}>
-            <Link href={`/city/${city.slug}`}>
-              {city.name}
-            </Link>
-          </li>
+          <Link key={city.slug} href={`/city/${city.slug}`}>
+            <a className="city-card">
+              <img
+                src={city.image || 'https://via.placeholder.com/600x400'}
+                alt={city.name}
+              />
+              <div>
+                <h3 style={{ margin: 0 }}>{city.name}</h3>
+                {city.streetCount && (
+                  <p style={{ color: '#555', marginTop: 6 }}>
+                    {city.streetCount} streets
+                  </p>
+                )}
+              </div>
+            </a>
+          </Link>
         ))}
-      </ul>
+      </div>
     </div>
   )
 }
